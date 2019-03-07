@@ -14,7 +14,7 @@
 <script>
 import Vuex from "vuex";
 import Banner from "./recommend/banner";
-// import Scroll from "./recommend/scroll"
+
 import Hello from "./recommend/hello";
 import Conn from "./recommend/conn";
 export default {
