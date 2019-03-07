@@ -16,4 +16,10 @@ export default {
 		 let data4 = await HomeData({"servicename":"gettopicinfos","interfaceid":"poialdapi.gettopicinfos","requrl":"http://tcmobileapi.17usoft.com/aladdin/queryHandler.ashx","reqbody":{"trId":"1757","cityId":0,"dwCityId":0,"isNetwork":true,"requestPlatfrom":"h5"},"iscache":"0"} )
 		commit("handleHotMutations4",data4.response.body)
 	}
+	async handleCity1({commit},i){
+		
+				let datadetails = await HomeData({"servicename":"getpocketguidedetailinfo","interfaceid":"poialdapi.getpocketguidedetailinfo","requrl":"http://tcmobileapi.17usoft.com/aladdin/QueryHandler.ashx","reqbody":{"selectCityId":i,"topicId":"0","requestPlatfrom":"h5"},"iscache":"0"} )
+				commit("handlemore1details", datadetails)
+			console.log(datadetails)
+	}
 }

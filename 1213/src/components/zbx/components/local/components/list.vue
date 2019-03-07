@@ -12,7 +12,7 @@
 					<li v-for="(item,index) in Likelist" >
 						<a href="" >
 							<div class="left">
-								<img :src="item.Pic3PathUrl" alt="">
+								<img v-lazy="item.Pic3PathUrl" alt="">
 							</div>
 							<div class="right">
 								<h2>{{item.MainTitle}}</h2>

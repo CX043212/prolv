@@ -2,11 +2,11 @@
 	<div class="zbx">
 		<div class="loading"></div>
 		<Header-com></Header-com>
-		<Banner-com></Banner-com>
-		<Hot-com></Hot-com>
-		<Sale-com></Sale-com>
-		<Tabbar-com></Tabbar-com>
-		<List-com></List-com>
+		<Banner-com ref="hand"></Banner-com>
+		<Hot-com ref="hand"></Hot-com>
+		<Sale-com ref="hand"></Sale-com>
+		<Tabbar-com ref="hand"></Tabbar-com>
+		<List-com ref="hand"></List-com>
 		
 	</div>
 </template>
@@ -19,7 +19,7 @@
 	import Sale from "./components/sale.vue";
 	import Tabbar from "./components/tabbar.vue";
 	import List from "./components/list.vue";
-
+	import {ZbxData} from "../../apis/home";
 	export default {
 		components:{
 			"Header-com":Header,
@@ -30,18 +30,19 @@
 			"List-com":List
 		},
 		created(){
-			this.$nextTick(function(){
-				this.handle1();
-				console.log(this)
-			})
+			this.$refs.hand.handle;
 			
 		},
 		methods:{
 			...Vuex.mapActions({
 				handle1:"zbx/handleZbx"
 			})
-		}	
-	}
+		},
+
+    
+}
+
+	
 </script>
 
 <style>

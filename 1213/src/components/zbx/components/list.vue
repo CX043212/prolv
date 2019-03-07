@@ -8,7 +8,7 @@
 					<li v-for="(item,index) in Likelist">
 						<a href="" class="will-like-list">
 							<div class="will_like_img">
-								<img :src="item.PictureUrl" alt="">
+								<img v-lazy="item.PictureUrl" alt="">
 								<p><em>{{item.CommentCount}}点评</em>{{item.Satisfaction}}满意度</p>
 							</div>
 							<div class="will_like_info">
@@ -36,13 +36,14 @@
 			Likelist: state => state.zbx.LikeList.Body.LineList
 		})
 	},
-	created() {
+	mounted(){
 		this.handle5()
 	},
 	methods: {
 		...Vuex.mapActions({
 			handle5: "zbx/handleZbx"
 		})
+		
 	},
 	}
 </script>

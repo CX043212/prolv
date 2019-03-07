@@ -21,15 +21,13 @@
 				hotList: state => state.zbx.hotList.Body.KeyWordsModel
 			})
 		},
-		created() {
-			this.handlew()
-		},
 		methods: {
 			...Vuex.mapActions({
 				handlew: "zbx/handleZbx"
 			}),
 			handleclick(){
-				this.$router.push("/zbx/local");
+				let i = 2;
+				this.$router.push({name:"loading",query:{i}});
 			}
 		},
 

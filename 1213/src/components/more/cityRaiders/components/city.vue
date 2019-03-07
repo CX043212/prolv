@@ -17,8 +17,7 @@
 				<div class="center">{{items.nodeName}}</div>
 				
 				<div class="city" v-for="data in items.cityList" > 
-					<router-link :to="path">
-						
+					<a @click="handleTo(data.cityId)">	
 							<ul >
 								<li><img v-lazy="data.imgUrl" alt=""></li>
 							</ul>
@@ -27,7 +26,7 @@
 							<li>{{data.wentCount}}</li>
 						</ul>
 						
-					</router-link>
+					</a>
 				</div>
 				
 			</div></a>
@@ -45,11 +44,6 @@
 	import Vuex from "vuex";
 	
 	export default {
-		data(){
-			return{
-				path:"/more/cityRaiders/details"
-			}
-		},
 		computed:{
 			...Vuex.mapState({
 				cityRaiders: state => state.home.cityRaiders,
@@ -59,8 +53,6 @@
 		created() {
 			setTimeout(()=>{
 				this.handleHomeData();
-				console.log("hahaha")
-				
 			},3000)
 			
 		},
@@ -68,6 +60,10 @@
 			...Vuex.mapActions({
 				handleHomeData: "home/handleHomeData",
 			}),
+			handleTo(data){
+				var i =4;
+				this.$router.push({name:"loading",query:{data}})
+			}
 			
 		},
 		updated(){

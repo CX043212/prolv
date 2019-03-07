@@ -19,9 +19,6 @@ export default {
       ZbxList: state => state.zbx.ZbxList.Body.AreaMarkList
     })
   },
-	created(){
-		this.handle()
-	},
   methods: {
     ...Vuex.mapActions({
       handle: "zbx/handleZbx"

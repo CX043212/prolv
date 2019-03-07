@@ -1,6 +1,6 @@
 <template>
 	<div class="down">
-		<a href="##" v-for="(item,index) in down">
+		<a href="https://m.17u.cn/app/la?refid=502817288&type=1" v-for="(item,index) in down">
 			<img :src="item.price">
 		</a>
 	</div>

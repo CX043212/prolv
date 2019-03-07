@@ -48,9 +48,6 @@
 
 			})
 		},
-		created() {
-			this.handle()
-		},
 		methods: {
 			...Vuex.mapActions({
 				handle: "zbx/handleZbx"
