@@ -55,11 +55,11 @@
 	
 </script>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 	
 	.header {
 			padding: 0;
-		height: .8rem;
+			height: .8rem;
 
 		}
 		.header .mint-header{
