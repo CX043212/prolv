@@ -75,7 +75,7 @@
 			width: 100%;
 		}
 		.header .mint-header-title{
-			font-size: .28rem;
+		
 			font-weight: 400;
 			
 		}
