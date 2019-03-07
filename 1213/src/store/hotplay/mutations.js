@@ -14,7 +14,12 @@ export default{
 	handleHotMutations4(state,data){
 		state.HotplayList4 = data;
 		console.log(state.HotplayList4)
+	},
+	handlemore1details(state,data){
+		state.moreDetails = data;
+		//console.log(state.moreDetails)
 	}
+	
 	
 // 	handleHotMutations(state,data){
 // 		state.HotplayList = data;
