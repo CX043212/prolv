@@ -45,7 +45,7 @@
 				handle:"hotplay/handleCity1",
 			}),
 			 handleClick(){
-			    this.$router.push("/more/cityRaiders")
+			    this.$router.push("/home")
 			},
 			handleTo(){
 				this.$router.push({"name":"loading",query:{}});
