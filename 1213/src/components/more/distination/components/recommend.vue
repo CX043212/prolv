@@ -20,7 +20,6 @@ import Conn from "./recommend/conn";
 export default {
   components:{
     "Banner-com":Banner,
-    // "Scroll-com":Scroll,
     "Hello-com":Hello,
     "Conn-com":Conn,
   },
